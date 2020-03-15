@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>404 Not Found</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <style>
+      /* @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      } */
+      img {
+        position: absolute;
+        animation: sizing 10s ease-in 1;
+        /* animation: fly 0.5s linear infinite alternate, sizing 20s ease-in-out 1; */
+      }
+
+      @keyframes fly {
+        from {
+          transfrom: rotate(0);
+        }
+        to {
+          transform: rotate(10deg);
+        }
+      }
+      @keyframes sizing {
+        from {
+          width: 50px;
+        }
+        to {
+          width: 500px;
+        }
+      }
+      h1,
+      h3 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="머쓱 복사본.png" alt="머쓱" />
+    <h1>페이지를 찾을 수 없습니다.</h1>
+    <h3>404 Page Not Founded</h3>
+    <script>
+      TweenMax.to(document.getElementsByTagName("img"), 10, {
+        bezier: {
+          type: "soft",
+          values: [
+            { x: 100, y: 700 },
+            { x: 900, y: 300 },
+            { x: 150, y: 100 },
+            { x: 350, y: 250 }
+          ],
+          autoRotate: false
+        },
+        ease: Power1.easeOut,
+        repeat: 0
+      });
+    </script>
+  </body>
+</html>
